@@ -1,7 +1,7 @@
 <h1>Artists</h1>
 <ul>
-  <% @artists.each do |artist| %>
-    <li><%= link_to artist.name + artist.songs.size, artist_path(@artist) %></li>
+  <% @artists.each do |a| %>
+    <li><%= link_to a.name, artist_path(@artist) %></li>
     <ol>
       <% artist.songs.each do |song| %>
         <li><%= link_to song.title, song_path(song) %></li>

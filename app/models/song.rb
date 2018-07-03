@@ -4,4 +4,8 @@ class Song < ActiveRecord::Base
   def artist_name
     artist.name
   end
+
+  def artist_title 
+    artist_name + " - " + title
+  end 
 end
